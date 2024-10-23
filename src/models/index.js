@@ -1,0 +1,10 @@
+module.exports.Token = require('./token.model');
+module.exports.User = require('./user.model');
+module.exports.Admin = require('./admin.modal');
+module.exports.Agency = require('./agency.model');
+module.exports.Bank = require('./bank.model');
+module.exports.Customer = require('./customer.model');
+module.exports.Boards = require('./boards.modal');
+module.exports.Workspace = require('./workSpace.modal');
+module.exports.Cards = require('./cards.modal');
+module.exports.BoardInvitation = require('./boardInvitation.modal');
