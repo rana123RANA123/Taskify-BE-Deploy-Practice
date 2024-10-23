@@ -1,5 +1,5 @@
 const { Workspace } = require('../models');
-const WorkSpace = require('../models/workSpace.modal');
+const WorkSpace = require('../models/workspace.modal');
 const createWorkSpace = async (workspaceData) => {
   const workspace = await WorkSpace.create(workspaceData);
   return workspace;
