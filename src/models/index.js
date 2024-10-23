@@ -5,6 +5,6 @@ module.exports.Agency = require('./agency.model');
 module.exports.Bank = require('./bank.model');
 module.exports.Customer = require('./customer.model');
 module.exports.Boards = require('./boards.modal');
-module.exports.Workspace = require('./workSpace.modal');
+module.exports.Workspace = require('./workspace.modal');
 module.exports.Cards = require('./cards.modal');
 module.exports.BoardInvitation = require('./boardInvitation.modal');
