@@ -2,7 +2,7 @@ const httpStatus = require('http-status');
 const catchAsync = require('../utils/catchAsync');
 const { workspaceService } = require('../services');
 const { Workspace, Boards } = require('../models');
-const WorkSpace = require('../models/workSpace.modal');
+const WorkSpace = require('../models/workspace.modal');
 
 const createWorkSpace = async (req, res) => {
   try {
