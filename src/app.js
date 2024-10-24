@@ -41,7 +41,10 @@ app.use(compression());
 
 // enable cors
 app.use(cors());
-app.options('*', cors());
+app.use(cors({
+  origin: ['http://localhost:3000', 'https://taskify-be-deploy-practice.vercel.app'],
+  credentials: true,
+}));
 
 
 // jwt authentication
@@ -56,6 +59,10 @@ if (config.env === 'production') {
 // v1 api routes
 app.use('/v1', routes);
 
+app.get('/health', (req, res) => {
+  res.status(200).send('Server is healthy');
+});
++
 
 // send back a 404 error for any unknown api request
 app.use((req, res, next) => {
