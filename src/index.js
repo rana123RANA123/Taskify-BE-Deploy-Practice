@@ -9,17 +9,21 @@ mongoose.connect(config.mongoose.url, config.mongoose.options).then(() => {
   server = app.listen(config.port, () => {
     logger.info(`Listening to port ${config.port}`);
   });
+}).catch((err) => {
+  logger.error('Failed to connect to MongoDB', err);
+  process.exit(1); // Exit process on DB connection failure
 });
+
 
 
 const exitHandler = () => {
   if (server) {
     server.close(() => {
       logger.info('Server closed');
-      process.exit(1);
+      process.exit(0);
     });
   } else {
-    process.exit(1);
+    process.exit(0);
   }
 };
 
