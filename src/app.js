@@ -53,6 +53,10 @@ if (config.env === 'production') {
   app.use('/v1/auth', authLimiter);
 }
 
+app.get('/', (req, res) => {
+    res.status(200).json({ message: 'API is working!' });
+});
+
 // v1 api routes
 app.use('/v1', routes);
 
