@@ -12,7 +12,11 @@ const upload = multer({ dest: 'uploads/' });
 
 router
 .route('/')
-.post(validate(attachmentValidation.createAttachment,upload.single('image')), attachmentController.createAttachment)
+.post(
+    upload.single('image'),
+    validate(attachmentValidation.createAttachment),
+    attachmentController.createAttachment
+  )
 .get(validate(attachmentValidation.getAttachment), attachmentController.getAttachments);
 
 router
